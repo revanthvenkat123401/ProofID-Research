@@ -1,0 +1,110 @@
+# ProofID-Research: Sensitive Data Exclusions
+#
+# STRATEGY:
+# - Exclude raw biometric data and model caches (never commit)
+# - Allow aggregate research measurements and reports (commit these)
+# - Allow anonymized plots and analysis results
+# - Distinguish between data/ (raw, excluded) and results/ (aggregate, included)
+
+# ===== RAW AUDIO FILES (BIOMETRIC DATA - DO NOT COMMIT) =====
+data/*.wav
+data/*.mp3
+data/*.flac
+data/*.m4a
+data/*.aac
+data/*.ogg
+data/*.opus
+
+# ===== RAW VIDEO FILES (BIOMETRIC DATA - DO NOT COMMIT) =====
+data/*.mp4
+data/*.avi
+data/*.mov
+data/*.mkv
+data/*.webm
+
+# ===== RAW FACE IMAGES / FRAMES (BIOMETRIC DATA - DO NOT COMMIT) =====
+data/*.jpg
+data/*.jpeg
+data/*.png
+data/*.bmp
+data/*.tiff
+data/*.gif
+
+# ===== ENTIRE DATA DIRECTORY (raw biometric) =====
+data/
+
+# ===== RAW BIOMETRIC EMBEDDINGS (DO NOT COMMIT) =====
+*_embeddings.pkl
+*_embeddings.pickle
+*_embeddings.npy
+*_embeddings.npz
+*_embeddings.csv
+*_embeddings.json
+
+# ===== MODEL CHECKPOINTS AND CACHES (DO NOT COMMIT) =====
+*.ckpt
+*.pth
+*.pt
+*.safetensors
+models/*/downloads/
+models/*/cache/
+pretrained_models/
+.cache/
+huggingface_cache/
+
+# ===== PYTHON VIRTUAL ENVIRONMENTS =====
+venv/
+env/
+ENV/
+.venv
+
+# ===== PYTHON CACHES =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ===== IDE FILES =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ===== JUPYTER NOTEBOOKS =====
+.ipynb_checkpoints
+*.ipynb
+
+# ===== LOGS =====
+*.log
+logs/
+
+# ===== ENVIRONMENT VARIABLES AND SECRETS (DO NOT COMMIT) =====
+.env
+.env.local
+*.key
+*.pem
+secrets.json
+credentials.json
+config_local.json
+api_keys.json
+
+# ===== OS ARTIFACTS =====
+.DS_Store
+Thumbs.db

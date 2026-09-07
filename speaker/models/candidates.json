@@ -1,0 +1,104 @@
+{
+  "candidates": [
+    {
+      "id": 1,
+      "name": "ECAPA-TDNN",
+      "source_repository": "speechbrain/speechbrain",
+      "source_url": "https://github.com/speechbrain/speechbrain",
+      "model_hub_id": "speechbrain/spkrec-ecapa-voxceleb",
+      "model_hub_platform": "HuggingFace",
+      "model_hub_url": "https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb",
+      "code_license": "Apache 2.0",
+      "code_license_url": "https://github.com/speechbrain/speechbrain/blob/develop/LICENSE",
+      "code_license_type": "Repository/Framework Code License",
+      "model_checkpoint_license": "UNVERIFIED - to be confirmed from HuggingFace model card and checkpoint metadata",
+      "model_checkpoint_license_type": "Pretrained Weights/Model License",
+      "framework": "PyTorch",
+      "model_format": "PyTorch .ckpt files",
+      "verified_properties": {
+        "embedding_dimension": 192,
+        "input_sample_rate_hz": 16000,
+        "input_format": "mono audio waveform",
+        "feature_backend": "Fbank (80 mel bins)",
+        "architecture_description": "Emphasized Channel Attention, Propagation and Aggregation in Time Delay Neural Network"
+      },
+      "unverified_properties": {
+        "model_size_mb": "UNVERIFIED - to be measured on disk",
+        "inference_latency_ms": "UNVERIFIED - to be measured on CPU",
+        "ram_consumption_mb": "UNVERIFIED - to be measured",
+        "onnx_conversion_feasible": "UNVERIFIED - to be tested",
+        "tflite_conversion_feasible": "UNVERIFIED - to be tested"
+      },
+      "evidence": [
+        "Source code available in SpeechBrain repository",
+        "Pre-trained checkpoint available through HuggingFace",
+        "Used in multiple SpeechBrain recipes (VoxCeleb, LibriTTS, CommonLanguage)",
+        "Embedding dimension: 192 confirmed in hparams (lin_neurons: 192)"
+      ],
+      "priority": 1,
+      "status": "Candidate evaluation pending"
+    },
+    {
+      "id": 2,
+      "name": "Resemblyzer (d-vector)",
+      "source_repository": "CorentinJ/Real-Time-Voice-Cloning",
+      "source_url": "https://github.com/CorentinJ/Real-Time-Voice-Cloning",
+      "model_hub_id": "Not on standard hub (local repo)",
+      "model_hub_platform": "GitHub",
+      "code_license": "MIT",
+      "code_license_url": "https://github.com/CorentinJ/Real-Time-Voice-Cloning/blob/master/LICENSE.md",
+      "code_license_type": "Repository/Framework Code License",
+      "model_checkpoint_license": "UNVERIFIED - to be confirmed from repository",
+      "model_checkpoint_license_type": "Pretrained Weights/Model License",
+      "framework": "PyTorch",
+      "model_format": "PyTorch model",
+      "verified_properties": {
+        "input_sample_rate_hz": 16000,
+        "input_format": "mono audio waveform"
+      },
+      "unverified_properties": {
+        "embedding_dimension": "UNVERIFIED - to be measured",
+        "model_size_mb": "UNVERIFIED - to be measured",
+        "inference_latency_ms": "UNVERIFIED - to be measured on CPU",
+        "ram_consumption_mb": "UNVERIFIED - to be measured",
+        "onnx_conversion_feasible": "UNVERIFIED - to be tested",
+        "tflite_conversion_feasible": "UNVERIFIED - to be tested"
+      },
+      "evidence": [
+        "Open-source repository with documented usage",
+        "Designed for real-time voice cloning scenarios",
+        "Known to be lightweight"
+      ],
+      "priority": 1,
+      "status": "Candidate evaluation pending"
+    },
+    {
+      "id": 3,
+      "name": "X-Vector (SpeechBrain variants)",
+      "source_repository": "speechbrain/speechbrain",
+      "source_url": "https://github.com/speechbrain/speechbrain",
+      "model_hub_id": "Various (see SpeechBrain documentation)",
+      "model_hub_platform": "HuggingFace",
+      "code_license": "Apache 2.0",
+      "framework": "PyTorch",
+      "verified_properties": {
+        "input_sample_rate_hz": 16000
+      },
+      "unverified_properties": {
+        "embedding_dimension": "UNVERIFIED - varies by model variant, to be measured",
+        "model_size_mb": "UNVERIFIED - to be measured",
+        "inference_latency_ms": "UNVERIFIED - to be measured",
+        "ram_consumption_mb": "UNVERIFIED - to be measured"
+      },
+      "priority": 2,
+      "status": "Secondary candidate - lower priority"
+    }
+  ],
+  "evaluation_status": "PENDING",
+  "date_candidates_compiled": "2026-09-07",
+  "important_note": "All properties marked UNVERIFIED will be measured during Phase 1 of Milestone 1. Code license and model checkpoint license are tracked separately. No property is claimed as fact until measured.",
+  "license_distinction": {
+    "code_license": "License of the repository/framework source code (e.g., Apache 2.0, MIT)",
+    "model_checkpoint_license": "License of the pretrained model weights/checkpoint (verified from model card or metadata)"
+  }
+}

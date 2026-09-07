@@ -24,6 +24,8 @@ The actual hackathon application will be created fresh in a separate repository 
 - **Milestone 10:** NPU Feasibility (Qualcomm QNN)
 - **Milestone 11:** Attack Testing (Replay, Photo, Video)
 
+These milestones are research checkpoints, not a requirement to implement every component. Each milestone must be validated independently, and the project may stop, pivot, or deprioritize a component when experiments show it is unreliable or impractical.
+
 ---
 
 ## Directory Structure
@@ -36,14 +38,14 @@ ProofID-Research/
 │
 ├── speaker/                     (Milestone 1: Speaker Verification)
 │   ├── README.md
-│   ├── data/                    (test audio samples)
+│   ├── data/                    (local-only raw biometric test data - never committed)
 │   ├── models/                  (model configs and metadata)
 │   ├── scripts/
 │   │   ├── 01_model_candidates.py       (evaluate speaker models)
 │   │   ├── 02_genuine_vs_impostor.py    (benchmark genuine vs impostor)
 │   │   ├── 03_replay_testing.py         (replay attack resistance)
 │   │   └── analyze_results.py           (results analysis)
-│   └── results/                 (experimental output, graphs, CSV)
+│   └── results/                 (experimental output, graphs, CSV - committed)
 │
 ├── face/                        (Milestone 2: Face Verification)
 │   └── (structure similar to speaker)
@@ -67,13 +69,17 @@ This research WILL NOT:
 - ❌ Use paid/cloud APIs
 - ❌ Require API keys
 - ❌ Pre-build hackathon submission code
+- ❌ Commit raw biometric data (audio, images, video, embeddings)
+- ❌ Commit model checkpoints or caches
+- ❌ Commit API keys or secrets
 
 This research WILL:
 - ✅ Benchmark open-source speaker/face models
-- ✅ Measure actual genuine vs impostor separation
+- ✅ Measure actual genuine vs. impostor separation (feasibility dataset only)
 - ✅ Test replay attack behavior
 - ✅ Assess Android feasibility
 - ✅ Document limitations honestly
+- ✅ Commit aggregate research results and measurements
 - ✅ Record all decisions with evidence
 
 ---
@@ -90,7 +96,7 @@ A well-built simple system beats a broken complex system.
 
 1. Identify suitable lightweight speaker embedding models
 2. Set up benchmarking harness
-3. Collect test audio samples
+3. Collect test audio samples (local only, not committed)
 4. Measure genuine similarity
 5. Measure impostor similarity
 6. Test replay behavior
